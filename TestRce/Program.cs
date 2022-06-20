@@ -6,15 +6,51 @@ namespace TestRce
     {
         static void Main(string[] args)
         {
-            Console.Write("1. číslo: ");
-            string sA = Console.ReadLine();
-            Console.Write("2. číslo: ");
-            string sB = Console.ReadLine();
-            Console.Write("3. číslo: ");
-            string sC = Console.ReadLine();
-            double a = Convert.ToDouble(sA);
-            double b = Convert.ToDouble(sB);
-            double c = Convert.ToDouble(sC);
+            double a = 0.0;
+            while (true)
+            {
+                Console.Write("1. číslo: ");
+                string sA = Console.ReadLine();
+                try
+                {
+                    a = Convert.ToDouble(sA);
+                    break;
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Tak tohle ne!!!");
+                }
+            }
+            double b = 0.0;
+            while (true)
+            {
+                Console.Write("2. číslo: ");
+                string sB = Console.ReadLine();
+                try
+                {
+                    b = Convert.ToDouble(sB);
+                    break;
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Tak tohle ne!!!");
+                }
+            }
+            double c = 0.0;
+            while (true)
+            {
+                Console.Write("3. číslo: ");
+                string sC = Console.ReadLine();
+                try
+                {
+                    c = Convert.ToDouble(sC);
+                    break;
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Tak tohle ne!!!");
+                }
+            }
             RceCalculator.FinalResault(a, b, c);
         }
     }
